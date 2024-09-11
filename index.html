@@ -12,46 +12,74 @@
 </head>
 
 <body>
+    <div class="main-content">
+        
     <header>
-        <img class='logo' src="/images/foodie hamburger logo.png" alt="">
+        <!-- hameshs img tag ko div ke andar rakhna accha hota h -->
+       <div class="head-container">
+        <div class="logo">
+            <img src="/images/foodie hamburger logo.png" alt="">
+        </div>
         <nav class='link'>
-            <a href="">Top Picks</a>
-            <a href="">Whopper</a>
-            <a href="">Stunner Menu</a>
-            <a href="">New Foodie Collection</a>
-            <a href="">Deal of the Day</a>
-         
+            <span class='cross'>X</span>
+            <a href="#Top-Picks">Top Picks</a>
+            <a href="#Whopper">Whopper</a>
+            <a href="#Stunner-Menu">Stunner Menu</a>
+            <a href="#New-Foodie">New Foodie Collection</a>
+            <a href="#Deal-of">Deal of the Day</a>
+            
         </nav>
+        <div class='halfcircle'><img src="/images/halfcircle.png" alt=""> <span>&#9776;</span></div>
+       </div>
     </header>
     <main>
-        <section>
-            <div class='firstimg'><img  src="/images/Group 2.png" alt=""></div>
-            <p class='para'>  Well, You can’t resist anymore!  </p>
+
+        <section class='hero-section'>
+            <div class='firstimg'><img src="/images/Group 2.png" alt=""></div>
+            <p class='para'> Well, You can’t resist anymore! </p>
         </section>
-        <section>
+        <section id='Top-Picks'>
             <h1>Top Picks</h1>
-            <img class='sameimg' src="/images/peter-dawn-sxZ_Ca6MkWM-unsplash 1.png" alt="">
-            
+            <div class='sameimg'><img  src="/images/peter-dawn-sxZ_Ca6MkWM-unsplash 1.png" alt=""></div>
+
         </section>
-        <section>
+        <section id='Whopper'>
             <h1>Whopper</h1>
-            <img class='sameimg' src="/images/enggal-mukti-48F-Uvx9wvw-unsplash 2.png" alt="">
-            
+            <div class="sameimg">
+
+                <img src="/images/enggal-mukti-48F-Uvx9wvw-unsplash 2.png" alt="">
+            </div>
+
         </section>
-        <section>
+        <section id='Stunner-Menu'>
             <h1>Stunner Menu</h1>
-            <img class='sameimg' src="/images/jonathan-borba-8l8Yl2ruUsg-unsplash 1.png" alt="">
-            
+            <div class='sameimg'>
+
+                <img src="/images/jonathan-borba-8l8Yl2ruUsg-unsplash 1.png" alt="">
+            </div>
+
         </section>
-        <section>
+        <section id='New-Foodie'>
             <h1>New Foodie Collection</h1>
-            <img class='sameimg' src="/images/john-fornander-VedLcUfLi74-unsplash 1.png" alt="">
-            
+            <div class='sameimg'>
+                <img src="/images/john-fornander-VedLcUfLi74-unsplash 1.png" alt="">
+
+            </div>
+        </section>
+        <section id='Deal-of'>
+            <h1>Deal of the Day</h1>
+            <div class='sameimg'>
+                <img src="/images/sk-CK6tjAIMJWM-unsplash (1) 1.png" alt="">
+
+                <div class='goto'><a href='# '>Go to Top</a> </div>
+            </div>
         </section>
     </main>
-    
+    <footer>
+        <p class='madeby'>Made with ❤️ by Sagar Pawar</p>
+     </footer>
 
-
+    </div>
 
 
     <script src='script.js'></script>

@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: poppins;
 }
@@ -9,25 +11,50 @@ body {
     background-color: #F6F0EB;
     margin: 0;
     padding: 0;
-
 }
+
+.main-content {
+    /*       height dene ke karan hamara scroll bar yaha per aa 
+                        gaya h isliye hame schroll behavior lagna  */
+
+    scroll-behavior: smooth;
+    height: 100vh;
+    /* position sticy ko run karane ke liye parent per height
+                        hona jaruri h nhi to vo work nhi karta h  */
+
+    overflow-x: hidden;
+}
+
 
 header {
     width: 100%;
     height: 110px;
-    padding: 15px 35px;
+
+
+}
+
+.cross {
+    display: none;
+
+    color: #492118;
+}
+
+.head-container {
+    padding: 20px 40px;
+    max-width: 1290px;
+    height: 110px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
     background-color: #FFFFFF;
     margin-bottom: 80px;
-
 }
 
 nav {
     display: flex;
-    gap: 40px;
+    
 }
 
 a {
@@ -38,20 +65,23 @@ a {
 
 }
 
-/* nav a + a{
+nav a+a {
     margin-left: 40px;
-    
-} */
+
+}
 
 
 
 
 .logo {
-    width: 61px;
-    height: 70.72px;
-    top: 25px;
-    left: 45px;
+    width: 55px;
+    height: 60.72px;
 
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
 }
 
 section {
@@ -59,39 +89,32 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-top: 40px;
 }
-main{
+
+main {
     padding: 0 30px;
 }
 
 .firstimg {
-  
     max-width: 1100px;
-    height: 616.1px;
-  
 
     margin: 0 auto;
 }
 
-.firstimg img {
+img {
     width: 100%;
 }
 
 .para {
     width: 366px;
     height: 30px;
-    top: 876px;
-    left: 537px;
-    gap: 0px;
-    opacity: 0px;
     color: #492118;
     font-family: Poppins;
     font-size: 20px;
     font-weight: 400;
-    line-height: 29.41px;
-    text-align: left;
-
+    text-align: center;
+    margin-bottom: 70px;
 
 }
 
@@ -100,50 +123,208 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     line-height: 41.93px;
-    text-align: left;
+    text-align: center;
     color: #492118;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 }
 
 .sameimg {
-    width: 800px;
+    max-width: 800px;
     height: 520px;
-    top: 1212px;
-    left: 200px;
-    gap: 0px;
-    opacity: 0px;
+    margin: 20px 0;
+
 
 }
 
-@media (max-width:600px) {
+.sameimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.madeby {
+    user-select: none;
+    text-align: center;
+    color: #858585;
+    margin: 80px 0;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+
+}
+
+.goto {
+    width: 100%;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+    margin-top: 40px;
+
+}
+
+.goto a {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.halfcircle {
+    display: none;
+}
+
+@media (max-width:1000px) {
+    nav a+a {
+        margin-left: 20px;
+
+    }
+
+    a {
+
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+}
+
+@media (max-width:860px) {
+    nav a+a {
+        margin-left: 10px;
+
+    }
+
+    a {
+
+        font-size: 12px;
+        font-weight: 600;
+
+    }
+}
+
+
+@media (max-width:650px) {
 
     header {
 
-        background-color: #F6F0EB;
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
     }
 
-    .link {
-
-        display: none;
-
+    .head-container {
+        
+        background: transparent;
+        /* background-color: white; */
     }
 
-    .logo {
-        width: 30px;
-        height: 34.78px;
+    nav {
+        opacity: 0;
+        position: absolute;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #ffffffd7;
+        right: 0;
+        transition: all 0.25s ease-in-out;
+        padding: 40px 35px;
         top: 20px;
-        left: 20px;
+        right: -200px;
     }
 
-    .menu {
-        display: block;
-        background-color: red;
-        width: 88.79px;
-        height: 88.79px;
-        top: -25px;
-        left: 414.79px;
+    .open-menu nav {
+        opacity: 1;
+        right: 26px;
 
+    }
+
+    .open-menu .halfcircle {
+        display: none;
+    }
+
+
+    .cross {
+
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        z-index: 10;
+        text-align: right;
+        display: block;
+        cursor: pointer;
+        /* display: none; */
+    }
+
+    nav a {
+
+        font-size: 14px;
+    }
+
+    nav a+a {
+        margin: 0;
+    }
+
+    .halfcircle {
+        width: 55px;
+        height: 35px;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        /* margin-right: 20px; */
+        cursor: pointer;
+        user-select: none;
+        display: block;
+
+    }
+
+    .halfcircle span {
+        position: absolute;
+        left: 44%;
+        top: 18%;
+    }
+
+    .firstimg {
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
+
+    .para {
+        width: 190px;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 5px;
+
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .sameimg {
+        max-width: 400px;
+        height: 200.57px;
+        margin: 5px 0;
+
+
+    }
+
+    .madeby {
+
+        margin: 80px 0;
+        font-size: 10px;
+        font-weight: 400;
+
+
+    }
+
+    .goto {
+
+        margin-top: 20px;
+
+    }
+
+    .goto a {
+        font-weight: 700;
+        font-size: 12px;
     }
 
 }
